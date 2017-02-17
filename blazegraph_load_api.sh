@@ -19,19 +19,16 @@ else
     JETTY_PORT=9999
 fi
 
-# Try to locate the RWStore.properties file using:
-# find /vagrant/downloads/BLAZEGRAPH_RELEASE_2_1_4 -name 'RWStore.properties'
-# The only result that seems to be an 'NSS' properties file is:
-# /vagrant/downloads/BLAZEGRAPH_RELEASE_2_1_4/src/resources/deployment/nss/WEB-INF/RWStore.properties
-#export NSS_DATALOAD_PROPERTIES=/usr/local/blazegraph/conf/RWStore.properties
 
 # TODO: Find the right file to use here, possibly include it in this repo?
 #
 # On a debian package installation, there is a file at
 # /etc/blazegraph/RWStore.properties
-# But not sure that is the correct file to use here?
-
-export NSS_DATALOAD_PROPERTIES=/vagrant/downloads/BLAZEGRAPH_RELEASE_2_1_4/src/resources/deployment/nss/WEB-INF/RWStore.properties
+# That file is almost identical to the source file in 
+# BLAZEGRAPH_RELEASE_2_1_4/src/resources/deployment/nss/WEB-INF/RWStore.properties
+# Other installations might put this file in:
+#export NSS_DATALOAD_PROPERTIES=/usr/local/blazegraph/conf/RWStore.properties
+export NSS_DATALOAD_PROPERTIES=/etc/blazegraph/RWStore.properties
 
 #Probably some unused properties below, but copied all to be safe.
 LOAD_PROP_FILE=/tmp/$$.properties
