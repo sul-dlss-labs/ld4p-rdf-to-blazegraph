@@ -32,10 +32,9 @@ fi
 # This install script depends on prior configuration
 if [ "$LD4P_MARCRDF" == "" ]; then
     echo "LD4P_MARCRDF path is undefined."
-    echo "Please try again after 'source ld4p_configure.sh'"
+    echo "Please try again after 'source ld4p_blazegraph_configure.sh'"
     exit 1
 fi
-
 
 echo "Blazegraph loading MARC-RDF files ${LD4P_MARCRDF}/*.rdf into 'ld4p' graph."
 find ${LD4P_MARCRDF} -type f -name '*.rdf' -exec ./blazegraph_load_api.sh {} ld4p \;
