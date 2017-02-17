@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ "$1" == "" -o "$1" == "-h" -o "$1" == "--help" ]; then
-    echo "Usage: $0 {file_or_directory} [{namespace}]"
+    echo "Usage: $0 {file_or_directory} [{graph_namespace}]"
     exit
 else
     FILE_OR_DIR=$1
@@ -24,6 +24,13 @@ fi
 # The only result that seems to be an 'NSS' properties file is:
 # /vagrant/downloads/BLAZEGRAPH_RELEASE_2_1_4/src/resources/deployment/nss/WEB-INF/RWStore.properties
 #export NSS_DATALOAD_PROPERTIES=/usr/local/blazegraph/conf/RWStore.properties
+
+# TODO: Find the right file to use here, possibly include it in this repo?
+#
+# On a debian package installation, there is a file at
+# /etc/blazegraph/RWStore.properties
+# But not sure that is the correct file to use here?
+
 export NSS_DATALOAD_PROPERTIES=/vagrant/downloads/BLAZEGRAPH_RELEASE_2_1_4/src/resources/deployment/nss/WEB-INF/RWStore.properties
 
 #Probably some unused properties below, but copied all to be safe.
