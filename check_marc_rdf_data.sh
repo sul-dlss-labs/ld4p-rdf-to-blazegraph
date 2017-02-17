@@ -11,6 +11,6 @@ if [ "$LD4P_MARCRDF" == "" ]; then
     exit 1
 fi
 
-echo "Searching for empty MARC-XML files ${LD4P_MARCRDF}/*.rdf"
+echo "Searching for empty MARC-RDF files ${LD4P_MARCRDF}/*.rdf"
 find ${LD4P_MARCRDF} -type f -empty -name '*.rdf' -exec ls -l {} \;
 
