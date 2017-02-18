@@ -19,6 +19,7 @@ else
     JETTY_PORT=9999
 fi
 
+BG_URL="http://localhost:${JETTY_PORT}/blazegraph/dataloader"
 
 # TODO: Find the right file to use here, possibly include it in this repo?
 #
@@ -58,10 +59,14 @@ fileOrDirs=$FILE_OR_DIR
 propertyFile=$NSS_DATALOAD_PROPERTIES
 EOT
 
-echo "Loading with properties..."
-cat $LOAD_PROP_FILE
 
-curl -X POST --data-binary @${LOAD_PROP_FILE} --header 'Content-Type:text/plain' http://localhost:${JETTY_PORT}/blazegraph/dataloader
+echo "Submitting to loader at: ${BG_URL}"
+echo "Submitting with properties..."
+cat $LOAD_PROP_FILE
+echo
+
+curl -X POST --data-binary @${LOAD_PROP_FILE} --header 'Content-Type:text/plain' ${BG_URL}
+echo
 
 #Let the output go to STDOUT/ERR to allow script redirection
 
