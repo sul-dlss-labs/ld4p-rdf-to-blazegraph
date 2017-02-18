@@ -24,7 +24,7 @@ fi
 # system ENV or on the command line, like so:
 # LD4P_APP=/ld4p_data source /path/to/ld4p_blazegraph_configure.sh
 if [ "$LD4P_APP" == "" ]; then
-    SCRIPT_PATH=$(dirname $0)
+    SCRIPT_PATH=$(pwd)
     export LD4P_APP=$SCRIPT_PATH
 fi
 if [ ! -d "$LD4P_APP" ]; then
