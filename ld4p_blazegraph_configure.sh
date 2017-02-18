@@ -10,10 +10,19 @@
 
 export LD4P_BASEURI="http://linked-data-test.stanford.edu/library/"
 
+if [ "$LD4P_BG" == "" ]; then
+    # Defaults to the Blazegraph-DEV box
+    export LD4P_BG='http://sul-ld4p-blazegraph-dev.stanford.edu/blazegraph'
+fi
+
+if [ "$LD4P_GRAPH" == "" ]; then
+    export LD4P_GRAPH='ld4p'
+fi
+
 # If the system already defines an LD4P_APP path, it will be used.
 # If a custom LD4P_APP path is required, it can be set in the
 # system ENV or on the command line, like so:
-# LD4P_APP=/ld4p_data source /path/to/ld4p_configure.sh
+# LD4P_APP=/ld4p_data source /path/to/ld4p_blazegraph_configure.sh
 if [ "$LD4P_APP" == "" ]; then
     SCRIPT_PATH=$(dirname $0)
     export LD4P_APP=$SCRIPT_PATH
@@ -26,7 +35,7 @@ fi
 # If the system already defines an LD4P_RDF path, it will be used.
 # If a custom LD4P_RDF path is required, it can be set in the
 # system ENV or on the command line, like so:
-# LD4P_RDF=/ld4p_data source /path/to/ld4p_configure.sh
+# LD4P_RDF=/ld4p_data source /path/to/ld4p_blazegraph_configure.sh
 if [ "$LD4P_RDF" == "" ]; then
     export LD4P_RDF=/rdf
 fi
@@ -41,20 +50,20 @@ export LD4P_LIB="${LD4P_APP}/lib"
 export LD4P_LOGS="${LD4P_APP}/log"
 export LD4P_CONFIGS="${LD4P_APP}/configs"
 # Create paths, recursively, if they don't exist
-mkdir -p ${LD4P_BIN} || kill -INT $$
-mkdir -p ${LD4P_LIB} || kill -INT $$
-mkdir -p ${LD4P_LOGS} || kill -INT $$
-mkdir -p ${LD4P_CONFIGS} || kill -INT $$
+#mkdir -p ${LD4P_BIN} || kill -INT $$
+#mkdir -p ${LD4P_LIB} || kill -INT $$
+#mkdir -p ${LD4P_LOGS} || kill -INT $$
+#mkdir -p ${LD4P_CONFIGS} || kill -INT $$
 
 # Paths for data records
 export LD4P_MARCRDF="${LD4P_RDF}/MarcRDF"
 # Create paths, recursively, if they don't exist
-mkdir -p ${LD4P_MARCRDF} || kill -INT $$
+#mkdir -p ${LD4P_MARCRDF} || kill -INT $$
 
 # Paths to archive processed records
 export LD4P_ARCHIVE_MARCRDF="${LD4P_RDF}/Archive/MarcRDF"
 # Create paths, recursively, if they don't exist
-mkdir -p ${LD4P_ARCHIVE_MARCRDF} || kill -INT $$
+#mkdir -p ${LD4P_ARCHIVE_MARCRDF} || kill -INT $$
 
 # Record processing options (toggles):
 # Toggle to archive processed records
