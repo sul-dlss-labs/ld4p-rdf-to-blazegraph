@@ -3,7 +3,7 @@
 if [ "$1" == '-h' -o "$1" == '--help' ]; then
     cat <<HERE
 Usage:
-source ./ld4p_configure.sh # or custom config file
+source ./ld4p_blazegraph_configure.sh # or custom config file
 $0 > log/blazegraph_load.log 2>&1
 
  IMPORTANT:
@@ -30,12 +30,24 @@ fi
 
 
 # This install script depends on prior configuration
-if [ "$LD4P_MARCRDF" == "" ]; then
+if [ -z "$LD4P_MARCRDF" ]; then
     echo "LD4P_MARCRDF path is undefined."
     echo "Please try again after 'source ld4p_blazegraph_configure.sh'"
     exit 1
 fi
 
-echo "Blazegraph loading MARC-RDF files ${LD4P_MARCRDF}/*.rdf into 'ld4p' graph."
-find ${LD4P_MARCRDF} -type f -name '*.rdf' -exec ./blazegraph_load_api.sh {} ld4p \;
+if [ -z "$LD4P_BG" ]; then
+    echo "LD4P_BG is undefined."
+    echo "Please try again after 'source ld4p_blazegraph_configure.sh'"
+    exit 1
+fi
+
+if [ -z "$LD4P_GRAPH" ]; then
+    echo "LD4P_GRAPH is undefined."
+    echo "Please try again after 'source ld4p_blazegraph_configure.sh'"
+    exit 1
+fi
+
+echo "Blazegraph loading MARC-RDF files ${LD4P_MARCRDF}/*.rdf into graph: ${LD4P_GRAPH}"
+find ${LD4P_MARCRDF} -type f -name '*.rdf' -exec ./blazegraph_sparql_update.sh ${LD4P_BG} ${LD4P_GRAPH} {} \;
 
