@@ -1,43 +1,8 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Maven template
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-
-# Exclude maven wrapper
-!/.mvn/wrapper/maven-wrapper.jar
-
-# Eclipse
-.classpath
-.project
-.settings/
-
-# Intellij
-.idea/
-*.iml
-*.iws
-
 # Mac
 .DS_Store
-
-java/src/main/resources/server.conf
-java/src/test/resources/server.conf
-java/log
-files/
 
 # Log files
 log/*.log
 
 # Development laptop scripts
 laptop*
-
-# Stanford Farmshare scripts are too specific to
-# a particular user account on Farmshare to be
-# included in this public git repo.
-farmshare*
