@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:relators="http://id.loc.gov/vocabulary/relators/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#"
+         xmlns:bf2="http://bibframe.org/vocab2/"
+         xmlns:bf="http://bibframe.org/vocab/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <bf:Work rdf:about="http://ld4p-test.stanford.edu/1629059">
+      <rdf:type rdf:resource="http://bibframe.org/vocab/Text"/>
+      <bf:authorizedAccessPoint>Savelʹev, N. I͡A. (Nikolaĭ I͡Akovlevich) Syny Altai͡a i Otechestva / N.I͡A. Savelʹev.Syny Altai͡a i Otechestva</bf:authorizedAccessPoint>
+      <bf:workTitle rdf:resource="http://ld4p-test.stanford.edu/1629059title5"/>
+      <bf:creator rdf:resource="http://ld4p-test.stanford.edu/1629059person6"/>
+      <bf:language rdf:resource="http://id.loc.gov/vocabulary/languages/rus"/>
+      <bf:subject rdf:resource="http://ld4p-test.stanford.edu/1629059topic8"/>
+      <bf:subject rdf:resource="http://ld4p-test.stanford.edu/1629059topic9"/>
+      <bf:classificationLcc rdf:resource="http://id.loc.gov/authorities/classification/T212"/>
+      <bf:authorizedAccessPoint xml:lang="x-bf-hash">savelʹevni͡anikolaĭi͡akovlevich19081967synyaltai͡aiotechestvaruswork</bf:authorizedAccessPoint>
+   </bf:Work>
+   <bf:Instance rdf:about="http://ld4p-test.stanford.edu/1629059instance13">
+      <rdf:type rdf:resource="http://bibframe.org/vocab/Monograph"/>
+      <bf:instanceTitle rdf:resource="http://ld4p-test.stanford.edu/1629059title16"/>
+      <bf:publication>
+         <bf:Provider>
+            <bf:providerName>
+               <bf:Organization>
+                  <bf:label>Altaĭskoe knizhnoe izd-vo</bf:label>
+               </bf:Organization>
+            </bf:providerName>
+            <bf:providerPlace>
+               <bf:Place>
+                  <bf:label>Barnaul </bf:label>
+               </bf:Place>
+            </bf:providerPlace>
+            <bf:providerDate>1985-</bf:providerDate>
+         </bf:Provider>
+      </bf:publication>
+      <bf:modeOfIssuance>single unit</bf:modeOfIssuance>
+      <bf:extent>v. :</bf:extent>
+      <bf:dimensions>21 cm.</bf:dimensions>
+      <bf:illustrationNote>ill., ports. ;</bf:illustrationNote>
+      <bf:titleStatement>Syny Altai͡a i Otechestva</bf:titleStatement>
+      <bf:providerStatement>Barnaul : Altaĭskoe knizhnoe izd-vo, 1985-</bf:providerStatement>
+      <bf:contentsNote>Ch. 1. Mastera khrustalʹnogo dela. Filipp Vasilʹevich Struzhkov. Kozʹma Dmitrievich Frolov. V starom Salaire -- ch. 2. Mekhanikus Ivan Polzunov -</bf:contentsNote>
+      <bf:note>1</bf:note>
+      <bf:supplementaryContentNote>Includes bibliographies.</bf:supplementaryContentNote>
+      <bf:lccn>
+         <bf:Identifier>
+            <bf:identifierValue>86169543</bf:identifierValue>
+            <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/lccn"/>
+         </bf:Identifier>
+      </bf:lccn>
+      <bf:systemNumber>
+         <bf:Identifier>
+            <bf:identifierValue>(CStRLIN)CSUG86-B68619</bf:identifierValue>
+            <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+         </bf:Identifier>
+      </bf:systemNumber>
+      <bf:systemNumber>
+         <bf:Identifier>
+            <bf:identifierValue>(OCoLC-M)15600303</bf:identifierValue>
+            <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+         </bf:Identifier>
+      </bf:systemNumber>
+      <bf:systemNumber>
+         <bf:Identifier>
+            <bf:identifierValue>(OCoLC-I)273735471</bf:identifierValue>
+            <bf:identifierScheme rdf:resource="http://id.loc.gov/vocabulary/identifiers/systemNumber"/>
+         </bf:Identifier>
+      </bf:systemNumber>
+      <bf:instanceOf rdf:resource="http://ld4p-test.stanford.edu/1629059"/>
+   </bf:Instance>
+   <bf:Annotation rdf:about="http://ld4p-test.stanford.edu/1629059annotation12">
+      <bf:derivedFrom rdf:resource="http://ld4p-test.stanford.edu/1629059.marcxml.xml"/>
+      <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/cst"/>
+      <bf:descriptionModifier rdf:resource="http://id.loc.gov/vocabulary/organizations/orlob"/>
+      <bf:descriptionConventions rdf:resource="http://id.loc.gov/vocabulary/descriptionConventions/aacr2"/>
+      <bf:generationProcess>DLC transform-tool:2015-10-28-T11:01:00</bf:generationProcess>
+      <bf:changeDate>1991-07-12T00:00</bf:changeDate>
+      <bf:annotates rdf:resource="http://ld4p-test.stanford.edu/1629059"/>
+   </bf:Annotation>
+   <bf:HeldItem rdf:about="http://ld4p-test.stanford.edu/1629059helditem32">
+      <bf:label>T212 .S29 1985</bf:label>
+      <bf:shelfMarkLcc>T212 .S29 1985</bf:shelfMarkLcc>
+      <bf:holdingFor rdf:resource="http://ld4p-test.stanford.edu/1629059instance13"/>
+   </bf:HeldItem>
+   <bf:Title rdf:about="http://ld4p-test.stanford.edu/1629059title5">
+      <bf:label>Syny Altai͡a i Otechestva / N.I͡A. Savelʹev.</bf:label>
+      <bf:titleValue>Syny Altai͡a i Otechestva</bf:titleValue>
+   </bf:Title>
+   <bf:Person rdf:about="http://ld4p-test.stanford.edu/1629059person6">
+      <bf:label>Savelʹev, N. I͡A. (Nikolaĭ I͡Akovlevich)</bf:label>
+      <bf:authorizedAccessPoint>Savelʹev, N. I͡A. (Nikolaĭ I͡Akovlevich)</bf:authorizedAccessPoint>
+      <bf:hasAuthority>
+         <madsrdf:Authority>
+            <madsrdf:authoritativeLabel>Savelʹev, N. I͡A. (Nikolaĭ I͡Akovlevich)</madsrdf:authoritativeLabel>
+         </madsrdf:Authority>
+      </bf:hasAuthority>
+   </bf:Person>
+   <bf:Topic rdf:about="http://ld4p-test.stanford.edu/1629059topic8">
+      <bf:authorizedAccessPoint>Inventors--Russia (Federation)--Siberia--Biography</bf:authorizedAccessPoint>
+      <bf:label>Inventors--Russia (Federation)--Siberia--Biography</bf:label>
+      <bf:hasAuthority>
+         <madsrdf:Authority>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/"
+                                        xmlns:owl="http://www.w3.org/2002/07/owl#"
+                                        xmlns:rdfs="http://www.w3.org/1999/02/22-rdf-schema#"
+                                        xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+                                        xmlns:marcxml="http://www.loc.gov/MARC21/slim"
+                                        xml:lang="en">Inventors--Russia (Federation)--Siberia--Biography</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/"
+                                   xmlns:owl="http://www.w3.org/2002/07/owl#"
+                                   xmlns:rdfs="http://www.w3.org/1999/02/22-rdf-schema#"
+                                   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+                                   xmlns:marcxml="http://www.loc.gov/MARC21/slim"
+                                   rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+                  <madsrdf:authoritativeLabel xml:lang="en">Inventors</madsrdf:authoritativeLabel>
+                  <madsrdf:elementList rdf:parseType="Collection">
+                     <madsrdf:TopicElement>
+                        <madsrdf:elementValue xml:lang="en">Inventors</madsrdf:elementValue>
+                     </madsrdf:TopicElement>
+                  </madsrdf:elementList>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+                  <madsrdf:authoritativeLabel xml:lang="en">Russia (Federation)</madsrdf:authoritativeLabel>
+                  <madsrdf:elementList rdf:parseType="Collection">
+                     <madsrdf:GeographicElement>
+                        <madsrdf:elementValue xml:lang="en">Russia (Federation)</madsrdf:elementValue>
+                     </madsrdf:GeographicElement>
+                  </madsrdf:elementList>
+               </madsrdf:Geographic>
+               <madsrdf:Geographic>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+                  <madsrdf:authoritativeLabel xml:lang="en">Siberia</madsrdf:authoritativeLabel>
+                  <madsrdf:elementList rdf:parseType="Collection">
+                     <madsrdf:GeographicElement>
+                        <madsrdf:elementValue xml:lang="en">Siberia</madsrdf:elementValue>
+                     </madsrdf:GeographicElement>
+                  </madsrdf:elementList>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+                  <madsrdf:authoritativeLabel xml:lang="en">Biography</madsrdf:authoritativeLabel>
+                  <madsrdf:elementList rdf:parseType="Collection">
+                     <madsrdf:TopicElement>
+                        <madsrdf:elementValue xml:lang="en">Biography.</madsrdf:elementValue>
+                     </madsrdf:TopicElement>
+                  </madsrdf:elementList>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+         </madsrdf:Authority>
+      </bf:hasAuthority>
+   </bf:Topic>
+   <bf:Topic rdf:about="http://ld4p-test.stanford.edu/1629059topic9">
+      <bf:authorizedAccessPoint>Industries--Altai Mountains Region--History</bf:authorizedAccessPoint>
+      <bf:label>Industries--Altai Mountains Region--History</bf:label>
+      <bf:hasAuthority>
+         <madsrdf:Authority>
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+            <madsrdf:authoritativeLabel xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/"
+                                        xmlns:owl="http://www.w3.org/2002/07/owl#"
+                                        xmlns:rdfs="http://www.w3.org/1999/02/22-rdf-schema#"
+                                        xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+                                        xmlns:marcxml="http://www.loc.gov/MARC21/slim"
+                                        xml:lang="en">Industries--Altai Mountains Region--History</madsrdf:authoritativeLabel>
+            <madsrdf:isMemberOfMADSScheme rdf:resource="http://id.loc.gov/authorities/subjects"/>
+            <madsrdf:componentList xmlns:identifiers="http://id.loc.gov/vocabulary/identifiers/"
+                                   xmlns:owl="http://www.w3.org/2002/07/owl#"
+                                   xmlns:rdfs="http://www.w3.org/1999/02/22-rdf-schema#"
+                                   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+                                   xmlns:marcxml="http://www.loc.gov/MARC21/slim"
+                                   rdf:parseType="Collection">
+               <madsrdf:Topic>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+                  <madsrdf:authoritativeLabel xml:lang="en">Industries</madsrdf:authoritativeLabel>
+                  <madsrdf:elementList rdf:parseType="Collection">
+                     <madsrdf:TopicElement>
+                        <madsrdf:elementValue xml:lang="en">Industries</madsrdf:elementValue>
+                     </madsrdf:TopicElement>
+                  </madsrdf:elementList>
+               </madsrdf:Topic>
+               <madsrdf:Geographic>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+                  <madsrdf:authoritativeLabel xml:lang="en">Altai Mountains Region</madsrdf:authoritativeLabel>
+                  <madsrdf:elementList rdf:parseType="Collection">
+                     <madsrdf:GeographicElement>
+                        <madsrdf:elementValue xml:lang="en">Altai Mountains Region</madsrdf:elementValue>
+                     </madsrdf:GeographicElement>
+                  </madsrdf:elementList>
+               </madsrdf:Geographic>
+               <madsrdf:Topic>
+                  <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+                  <madsrdf:authoritativeLabel xml:lang="en">History</madsrdf:authoritativeLabel>
+                  <madsrdf:elementList rdf:parseType="Collection">
+                     <madsrdf:TopicElement>
+                        <madsrdf:elementValue xml:lang="en">History.</madsrdf:elementValue>
+                     </madsrdf:TopicElement>
+                  </madsrdf:elementList>
+               </madsrdf:Topic>
+            </madsrdf:componentList>
+         </madsrdf:Authority>
+      </bf:hasAuthority>
+   </bf:Topic>
+   <bf:Title rdf:about="http://ld4p-test.stanford.edu/1629059title16">
+      <bf:label>Syny Altai͡a i Otechestva / N.I͡A. Savelʹev.</bf:label>
+      <bf:titleValue>Syny Altai͡a i Otechestva</bf:titleValue>
+   </bf:Title>
+</rdf:RDF>
