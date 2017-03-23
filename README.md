@@ -47,3 +47,38 @@ application, as follows:
 4. Load a test rdf xml file into the 'kb' namespace of blazegraph on the remote VM:
 
     `cap dev deploy:run_test`
+
+## Conversions
+
+To run the conversion on a deployed system, such as the blazegraph-dev box:
+
+```
+cd ~/ld4p-rdf-to-blazegraph/current/
+log_file="./log/blazegraph_load_rdf_$(date --iso-8601).log"
+./bin/blazegraph_load_rdf.sh > $log_file 2>&1 &
+```
+
+The conversion runs in the background. To check that it's working, quickly tail the
+log file or count the records processed:
+```
+grep -c 'Uploading' $log_file
+tail -f $log_file # tailing the log consumes some IO and CPU
+```
+To troubleshoot the conversion, check that the configuration data from the shared_configs is
+correct in `~/ld4p-rdf-to-blazegraph-config/config/` and that these files are up to date.
+Also check that those files have been copied into `~/ld4p-rdf-to-blazegraph/shared/config/`.
+
+Running the conversions can take some time.  It's a good idea to run them using a gnu-screen
+session to leave it running and come back to it later after disconnecting.  Using gnu-screen
+is fairly simple once you get to know it a little.  To start it:
+```
+screen -ls  # to list existing screen sessions
+screen -r   # to _r_econnect to a screen session
+screen      # to start a new screen session
+# screen runs a bash shell in the screen terminal
+# to disconnect from the screen terminal, use ALT-D
+```
+
+To find the basics on gnu-screen, google for relevant hits, such as:
+https://www.linux.com/learn/taking-command-terminal-gnu-screen
+
