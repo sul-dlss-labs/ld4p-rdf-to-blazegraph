@@ -31,7 +31,8 @@ Capistrano::OneTimeKey.generate_one_time_key!
 # set :pty, true
 
 # Default value for :linked_files is []
-# append :linked_files, "config/database.yml", "config/secrets.yml"
+#append :linked_files, "config/config.sh"
+#append :linked_files, "config/config_blazegraph.sh"
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log'
@@ -47,10 +48,10 @@ append :linked_dirs, 'log'
 
 namespace :deploy do
   # needs to be in deploy namespace so deploy_host is defined properly (part of current_path)
-  desc 'load test rdf xml into blazegraph test namespace'
+  desc 'load test rdf xml into blazegraph'
   task :run_test do
     on roles(:app) do
-      execute "cd #{current_path} && ./load_blazegraph_test.sh"
+      execute "cd #{current_path} && ./blazegraph_load_test.sh"
     end
   end
 end
