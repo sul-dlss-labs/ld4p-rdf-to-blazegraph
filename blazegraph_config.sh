@@ -5,7 +5,7 @@
 # source ./config/config_blazegraph.sh
 
 [ -f /etc/default/blazegraph ] && source /etc/default/blazegraph
-[ -z "$JETTY_PORT" ] && [ -f /usr/share/tomcat/webapps/blazegraph ] && JETTY_PORT=80
+[[ -z "$JETTY_PORT" && -d /usr/share/tomcat/webapps/blazegraph ]] && export JETTY_PORT=80
 [ -z "$JETTY_PORT" ] && JETTY_PORT=9999
 
 export BG_URL="http://localhost:${JETTY_PORT}/blazegraph"
