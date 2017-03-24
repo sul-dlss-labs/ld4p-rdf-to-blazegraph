@@ -1,25 +1,22 @@
 #!/bin/bash
 
 # To avoid conflicts with real data, this test script cannot source
-# the $LD4P_ROOT/config/config.sh file that is linked to a
+# the $SCRIPT_PATH/config/config.sh file that is linked to a
 # shared_configs file on a deployment system.
 
-SCRIPT_PATH=$( cd $(dirname $0) && pwd -P )
-export LD4P_ROOT=$( cd "${SCRIPT_PATH}" && pwd -P )
-
-# Test data
-rdf_path="${LD4P_ROOT}/data/test"
-rdf_uri="http://ld4p-test.stanford.edu/1629059#Work"
+export SCRIPT_PATH=$( cd $(dirname $0) && pwd -P )
 
 # Blazegraph settings
-source "${LD4P_ROOT}/config/config_blazegraph.sh"
-export BG_GRAPH='kb'
-export BG_SPARQL="${BG_URL}/namespace/${BG_GRAPH}/sparql";
+source "${SCRIPT_PATH}/blazegraph_config.sh"
+
+# Test data
+rdf_path="${SCRIPT_PATH}/data/test"
+rdf_uri="http://ld4p-test.stanford.edu/1629059#Work"
 
 # ---
 # Load data
 
-${LD4P_ROOT}/blazegraph_load_rdf.sh ${BG_SPARQL} ${rdf_path}
+${SCRIPT_PATH}/blazegraph_load_rdf.sh ${BG_SPARQL} ${rdf_path}
 
 # ---
 # Issue a SPARQL query to confirm the data is loaded
