@@ -9,7 +9,7 @@ Usage:
 $0 {blazegraph_sparql_uri} {rdf_data_directory } > log/blazegraph_load.log 2>&1
 
 Example:
-$0 http://localhost:9999/blazegraph/kb/sparql ./data/test
+$0 http://localhost:9999/blazegraph/namespace/kb/sparql ./data/test
 
 HERE
 }
