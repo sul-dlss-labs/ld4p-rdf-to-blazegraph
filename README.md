@@ -54,8 +54,17 @@ To run the conversion on a deployed system, such as the blazegraph-dev box:
 
 ```
 cd ~/ld4p-rdf-to-blazegraph/current/
+./blazegraph_load_rdf.sh -h
+# read the help info and modify the example so it works on real data
+```
+
+Then define the input parameters and call the script, e.g.
+
+```
+bg_sparql_uri="http://localhost:9999/blazegraph/kb/sparql"
+rdf_data_path=./data/rdf
 log_file="./log/blazegraph_load_rdf_$(date --iso-8601).log"
-./blazegraph_load_rdf.sh > $log_file 2>&1 &
+./blazegraph_load_rdf.sh ${bg_sparql_uri} ${rdf_data_path} > $log_file 2>&1 &
 ```
 
 The conversion runs in the background. To check that it's working, quickly tail the
