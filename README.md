@@ -55,7 +55,7 @@ To run the conversion on a deployed system, such as the blazegraph-dev box:
 ```
 cd ~/ld4p-rdf-to-blazegraph/current/
 log_file="./log/blazegraph_load_rdf_$(date --iso-8601).log"
-./bin/blazegraph_load_rdf.sh > $log_file 2>&1 &
+./blazegraph_load_rdf.sh > $log_file 2>&1 &
 ```
 
 The conversion runs in the background. To check that it's working, quickly tail the

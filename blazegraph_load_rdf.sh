@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SCRIPT_PATH=$( cd $(dirname $0) && pwd -P )
-export LD4P_ROOT=$( cd "${SCRIPT_PATH}/.." && pwd -P )
+export LD4P_ROOT=$( cd "${SCRIPT_PATH}" && pwd -P )
 source ${LD4P_ROOT}/config/config.sh
 source ${LD4P_ROOT}/config/config_blazegraph.sh
 

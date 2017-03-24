@@ -51,7 +51,7 @@ namespace :deploy do
   desc 'load test rdf xml into blazegraph'
   task :run_test do
     on roles(:app) do
-      execute "cd #{current_path} && ./bin/blazegraph_load_test.sh"
+      execute "cd #{current_path} && ./blazegraph_load_test.sh"
     end
   end
 end

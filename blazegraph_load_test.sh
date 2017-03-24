@@ -5,7 +5,7 @@
 # shared_configs file on a deployment system.
 
 SCRIPT_PATH=$( cd $(dirname $0) && pwd -P )
-export LD4P_ROOT=$( cd "${SCRIPT_PATH}/.." && pwd -P )
+export LD4P_ROOT=$( cd "${SCRIPT_PATH}" && pwd -P )
 
 # Test data
 rdf_file="${LD4P_ROOT}/data/test/one_record.rdf"
