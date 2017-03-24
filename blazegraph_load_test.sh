@@ -8,7 +8,7 @@ SCRIPT_PATH=$( cd $(dirname $0) && pwd -P )
 export LD4P_ROOT=$( cd "${SCRIPT_PATH}" && pwd -P )
 
 # Test data
-rdf_file="${LD4P_ROOT}/data/test/one_record.rdf"
+rdf_path="${LD4P_ROOT}/data/test"
 rdf_uri="http://ld4p-test.stanford.edu/1629059#Work"
 
 # Blazegraph settings
@@ -19,8 +19,7 @@ export BG_SPARQL="${BG_URL}/namespace/${BG_GRAPH}/sparql";
 # ---
 # Load data
 
-echo "Blazegraph loading MARC-RDF file ${rdf_file} into graph '${BG_GRAPH}'"
-${LD4P_ROOT}/bin/blazegraph_sparql_update.sh ${BG_SPARQL} ${rdf_file}
+${LD4P_ROOT}/blazegraph_load_rdf.sh ${BG_SPARQL} ${rdf_path}
 
 # ---
 # Issue a SPARQL query to confirm the data is loaded
