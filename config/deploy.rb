@@ -31,8 +31,8 @@ Capistrano::OneTimeKey.generate_one_time_key!
 # set :pty, true
 
 # Default value for :linked_files is []
-append :linked_files, "config/config.sh"
-append :linked_files, "config/config_blazegraph.sh"
+#append :linked_files, "config/config.sh"
+#append :linked_files, "config/config_blazegraph.sh"
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log'
