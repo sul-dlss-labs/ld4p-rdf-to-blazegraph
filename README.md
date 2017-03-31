@@ -27,33 +27,24 @@ Capistrano is used for deployment.
     `cap dev deploy:run_test`
 
 
-## Utility to load a directory of RDF files
+## Utility to load a directory of RDF files or a single RDF file
 
-The `./blazegraph_load_rdf.sh` uses `find` to iterate on all the files in a directory.
+The `./blazegraph_load_rdf.sh` uses `find` to iterate on the files in a directory.
 
 ```
 $ ./blazegraph_load_rdf.sh -h
 Usage:
-./blazegraph_load_rdf.sh {blazegraph_sparql_uri} {rdf_data_directory} > log/blazegraph_load.log 2>&1
+./blazegraph_load_rdf.sh {blazegraph_sparql_uri} {rdf_data} > log/blazegraph_load.log 2>&1
 
-Example:
+Examples:
+
+- loading a directory of files
 ./blazegraph_load_rdf.sh http://localhost:9999/blazegraph/namespace/kb/sparql ./data/test
-```
 
-
-## Utility to load a single RDF file
-
-The `./bin/blazegraph_sparql_update.sh` script works for a single RDF file.  This script
-is called by the `./blazegraph_load_rdf.sh` as it iterates on all the files in a directory.
+- loading a single file
+./blazegraph_load_rdf.sh http://localhost:9999/blazegraph/namespace/kb/sparql ./data/test/one_record.rdf 
 
 ```
-$ ./bin/blazegraph_sparql_update.sh -h
-Usage: ./bin/blazegraph_sparql_update.sh {blazegraph_sparql_url} {rdfxml_file}
-
-e.g.:  ./bin/blazegraph_sparql_update.sh http://localhost:9999/blazegraph/namespace/kb/sparql ./data/test/one_record.rdf
-
-```
-
 
 ## RDF Loading on Deployment Systems
 
